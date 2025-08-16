@@ -64,13 +64,39 @@ designed with scalability and simplicity in mind.
 ### Prerequisites:
 - Node.js: v14 or higher.
 - MongoDB: Local installation or MongoDB Atlas account.
-- Xcode: Xcode 26 or higher for iOS app.
+- Xcode: Xcode 26 or higher for the iOS app.
 - npm: For backend dependencies.
 - Git: For cloning the repo.
 
-### Backend Setup
-1. Clone the repo.
-2. Install depenencies
+### Backend Setup:
+1. Clone the repo:
+   ```bash
+   git clone <repository-url>
+   cd URLShortener
+   ```
+   
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory:
+   ```plain
+   MONGO_URI=mongodb://localhost:27017/urlshortener
+   BASE_URL=http://localhost:3000
+   PORT=3000
+   ```
+   - For MongoDB Atlas, replace `MONGO_URI` with your Atlas connection string.
+
+4. Start MongoDB:
+   - Local: Run `mongod`.
+   - Atlas: Ensure your IP is allowlisted.
+
+5. Start the backend.
+   ```bash
+   node server.js
+   ```
+
 
 
 
