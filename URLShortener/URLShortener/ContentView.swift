@@ -10,10 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack {
+                Text("Original URL:")
+                TextField("Enter a URL here", text: .constant(""))
+            }
+            .padding(10)
+
+            HStack {
+                Text("Short URL:")
+                Text("https://example.com")
+            }
         }
         .padding()
     }
