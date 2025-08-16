@@ -13,5 +13,14 @@ designed with scalability and simplicity in mind.
 - The short URL will have a default lifespan and can be customized.
 - The short URL tracks its usage through metrics and analytics, but this tracking does not have to be performed in real-time.
 
-# Requirements:
+# Requirements
+
+### Functional Requirements:
+- Users can submit a valid long URL to receive a short URL.
+- Short URLs redirect to the original long URL.
+- iOS app provides a simple interface to shorten URLs and display results.
+- System stores URL mappings persistently.
+- Short codes are unique and collision-free.
+
+### Non-Functional Requirements:
 
