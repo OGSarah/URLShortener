@@ -59,5 +59,19 @@ designed with scalability and simplicity in mind.
 - .env: Environment variables (MongoDB URI, base URL, port).
 - URLShortenter/URLShortener/URLShortener.xcodeproj: SwiftUI iOS app for URL shortening and testing
 
+# Setup Instructions
+
+### Prerequisites:
+- Node.js: v14 or higher.
+- MongoDB: Local installation or MongoDB Atlas account.
+- Xcode: Xcode 26 or higher for iOS app.
+- npm: For backend dependencies.
+- Git: For cloning the repo.
+
+### Backend Setup
+1. Clone the repo.
+2. Install depenencies
+
+
 
 
