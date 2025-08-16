@@ -96,6 +96,19 @@ designed with scalability and simplicity in mind.
    ```bash
    node server.js
    ```
+### iOS App Setup:
+1. Navigate to the iOS app directory:
+   ```bash
+   cd URLShortener/URLShortener
+   ```
+
+2. Open in Xcode:
+   ```bash
+   open URLShortener.xcodeproj
+   ```
+
+3. Ensure the backend is running and accessible.
+4. Build and run in Xcode's simulator or on a device (not sure if this is possible when using local host).
 
 
 
