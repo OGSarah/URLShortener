@@ -1,4 +1,4 @@
-# URL Shortener System Design
+# URL Shortener System Design (Currently WIP)
 This repository contains a minimal URL shortener designed with a Node.js/Express backend, MongoDB for storage, and a SwiftUI iOS app for testing. The system is built to demonstrate a complete
 end-to-end solution for URL shortening, focusing on clear use cases, requirements, and a simple yet extensible design.
 
