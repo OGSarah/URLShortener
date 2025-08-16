@@ -6,6 +6,18 @@ end-to-end solution for URL shortening, focusing on clear use cases, requirement
 The URL shortener system allows users to convert long URLs into short unique codes and redirect from these codes to the orginal URLs. It includes a RESTful backend API and an iOS app for user interaction, 
 designed with scalability and simplicity in mind.
 
+# Frameworks & Languages 
+- Frontend:
+  - Swift
+  - SwiftUI
+  - SwiftLint
+  - iOS 26
+
+- Backend:
+   - Node.js
+   - MongoDB
+   - JavaScript
+
 # Use Cases
 - A user enters a URL and gets back a short URL.
 - The short URL will direct to the orginal URL when it is accessed.
@@ -34,11 +46,14 @@ designed with scalability and simplicity in mind.
       - POST /shorten: Accepts a long URL and returns a short URL.
       - GET /:code: Redirects to the original URL based on the short code.
    - Short code generation: Uses shortid for random, unique codes (6–8 characters, base62-like).
+     
 - Database: MongoDB for storing URL mappings.
   - Schema: { shortCode: String, longUrl: String, createdAt: Date }.
   - Indexes on shortCode for fast lookups.
+    
 - iOS App: SwiftUI app for testing URL shortening and redirection.
   - Features: URL input, shorten button, short URL display, and tap-to-open functionality.
+    
 - Communication: HTTP/JSON for API requests, URLSession for iOS app communication.
 
 ### Design Decisions:
@@ -68,10 +83,12 @@ designed with scalability and simplicity in mind.
    git clone <repository-url>
    cd URLShortener
    ```
+   
 2. Install dependencies:
    ```bash
    npm install
    ```
+   
 3. Create a `.env` file in the root directory:
    ```plain
    MONGO_URI=mongodb://localhost:27017/urlshortener
@@ -79,23 +96,29 @@ designed with scalability and simplicity in mind.
    PORT=3000
    ```
    - For MongoDB Atlas, replace `MONGO_URI` with your Atlas connection string.
+     
 4. Start MongoDB:
    - Local: Run `mongod`.
    - Atlas: Ensure your IP is allowlisted.
+     
 5. Start the backend.
    ```bash
    node server.js
    ```
+   
 ### iOS App Setup:
 1. Navigate to the iOS app directory:
    ```bash
    cd URLShortener/URLShortener
    ```
+   
 2. Open in Xcode:
    ```bash
    open URLShortener.xcodeproj
    ```
+   
 3. Ensure the backend is running and accessible.
+   
 4. Build and run in Xcode's simulator or on a device (not sure if this is possible when using local host).
 
 # Usage
@@ -107,6 +130,7 @@ designed with scalability and simplicity in mind.
      ```bash
      curl -X POST -H "Content-Type: application/json" -d '{"longUrl":"https://example.com"}' http://localhost:3000/shorten
      ```
+     
 - Redirect (`GET /:code`):
   - Access: `http://localhost:3000/abc123`
   - Redirects to the original URL.
@@ -122,10 +146,12 @@ designed with scalability and simplicity in mind.
 - Backend:
   - Test /shorten and /:code with Postman or curl.
   - Verify MongoDB stores mappings in the urls collection.
+    
 - iOS App:
   - Test in Xcode simulator.
   - Use `ngrok` to expose the local backend or deploy to a cloud service.
   - Confirm URL shortening and redirection work end-to-end.
+    
 - Edge Cases:
   - Test invalid URLs (should return 400).
   - Test non-existent short codes (should return 404).
