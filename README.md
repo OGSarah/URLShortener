@@ -47,4 +47,17 @@ designed with scalability and simplicity in mind.
 
 - Communication: HTTP/JSON for API requests, URLSession for iOS app communication.
 
+### Design Decisions:
+- Short Code Generation: Random shortid for simplicity; base62 with counter-based encoding can be added for scalability.
+- Database Choice: MongoDB for flexibility and ease of setup (local or cloud-based with Atlas).
+- iOS App: SwiftUI for modern, lightweight UI; minimal features for testing.
+- Local Testing: Backend runs on localhost:3000, accessible by the iOS app in Xcode simulator.
+- Extensibility: Modular design allows adding rate limiting later.
+
+### Project Structure:
+- server.js: Express backend with API logic.
+- .env: Environment variables (MongoDB URI, base URL, port).
+- 
+
+
 
