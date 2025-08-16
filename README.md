@@ -29,3 +29,22 @@ designed with scalability and simplicity in mind.
 - Simplicity: Minimal implementation for local testing and development.
 - Security: Validate input URLs to prevent malicious redirects.
 
+# System Design
+
+### Architecture:
+- Backend: Node.js with Express for RESTful APIs.
+   - Endpoints:
+      - POST /shorten: Accepts a long URL and returns a short URL.
+      - GET /:code: Redirects to the original URL based on the short code.
+   - Short code generation: Uses shortid for random, unique codes (6–8 characters, base62-like).
+
+- Database: MongoDB for storing URL mappings.
+  - Schema: { shortCode: String, longUrl: String, createdAt: Date }.
+  - Indexes on shortCode for fast lookups.
+
+- iOS App: SwiftUI app for testing URL shortening and redirection.
+  - Features: URL input, shorten button, short URL display, and tap-to-open functionality.
+
+- Communication: HTTP/JSON for API requests, URLSession for iOS app communication.
+
+
