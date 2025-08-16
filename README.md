@@ -23,4 +23,9 @@ designed with scalability and simplicity in mind.
 - Short codes are unique and collision-free.
 
 ### Non-Functional Requirements:
+- Performance: Handle basic API requests with low latency (< 1s for redirects).
+- Scalability: Design supports future scaling (e.g., distributed database, load balancing).
+- Reliability: Ensure short URLs remain valid indefinitely.
+- Simplicity: Minimal implementation for local testing and development.
+- Security: Validate input URLs to prevent malicious redirects.
 
