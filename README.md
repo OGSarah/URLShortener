@@ -1,4 +1,9 @@
-# URL Shortener System Design (Currently WIP)
+<div align="center">
+  <img src="https://github.com/OGSarah/URLShortener/blob/dadc60fe555ecf299b7c6c449a9bd2f97aa59613/appicon_screenshot.png" width="300" style="border: 3px solid white; border-radius: 15px; vertical-align: middle; margin-right: 20px;">
+  <h1 style="display: inline-block; vertical-align: middle;">URLShortener</h1>
+</div>
+
+# Currently WIP
 This repository contains a minimal URL shortener designed with a Node.js/Express backend, MongoDB for storage, and a SwiftUI iOS app for testing. The system is built to demonstrate a complete
 end-to-end solution for URL shortening, focusing on clear use cases, requirements, and a simple yet extensible design.
 
