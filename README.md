@@ -76,6 +76,7 @@ designed with scalability and simplicity in mind.
 
 # Setup Instructions
 ### Prerequisites:
+- MacOS 26.0+
 - Node.js: v14 or higher.
 - MongoDB: Local installation or MongoDB Atlas account.
 - Xcode: Xcode 26 or higher for the iOS app.
