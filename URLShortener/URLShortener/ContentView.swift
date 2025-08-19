@@ -24,12 +24,12 @@ struct ContentView: View {
                     .textInputAutocapitalization(.never)
                     .keyboardType(.URL)
 
-                Button(action: { validate(name: originalURL) }) {
+                Button(action: { validate(name: originalURL) }, label: {
                     Text("Shorten URL")
                         .padding()
                         .foregroundStyle(.white)
                         .glassEffect(.regular.tint(.blue).interactive())
-                }
+                })
             }
             .padding(10)
             .padding(.bottom, 50)
